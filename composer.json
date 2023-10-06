@@ -1,0 +1,44 @@
+{
+    "name": "restjs/php-rest-api",
+    "description": "Create REST API with the help of Php, MySQL, Mongo DB",
+    "type": "package",
+    "keywords": [
+        "PhpRestAPI",
+        "MySqlAPI",
+        "RestAPI"
+    ],
+    "homepage": "https://github.com/RestJS/php-rest-api",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "RestJS\\PhpRestApi\\": "src/"
+        }
+    },
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "RestJS/php-rest-api",
+                "version": "v1",
+                "source": {
+                    "url": "https://github.com/RestJS/php-rest-api.git",
+                    "type": "git",
+                    "reference": "master"
+                }
+            }
+        }
+    ],
+    "authors": [
+        {
+            "name": "Pramod Singh",
+            "email": "spramodgusain@gmail.com",
+            "homepage": "https://github.com/fullstackondemand",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "7.1.*|7.2.*|7.3.*|7.4.*|8.0.*|8.1.*"
+    }
+}
