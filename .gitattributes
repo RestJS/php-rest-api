@@ -1,4 +1,3 @@
-/uploads export-ignore
-/.gitattributes export-ignore
-/.gitignore export-ignore
-/README.md export-ignore
+/* export-ignore
+/src -export-ignore
+/composer.json -export-ignore
