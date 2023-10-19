@@ -39,7 +39,7 @@ class Put {
 
     $sql = "UPDATE $table SET $dataString  WHERE id = $id";
 
-    if ($con->query($sql) === TRUE) {
+    if ($con->query($sql) === true) {
       echo json_encode(['status'=>'Success', 'message'=>'Data is Updated.']);
     }
     else {

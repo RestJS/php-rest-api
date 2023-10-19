@@ -41,7 +41,7 @@ class Post {
 
     $sql = "INSERT INTO $table ($keys) VALUES ('$val')";
 
-    if ($con->query($sql) === TRUE) {
+    if ($con->query($sql) === true) {
       echo json_encode(['status' => 'Success', 'message' => 'Data is Inserted.']);
     }
     else {

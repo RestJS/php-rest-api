@@ -24,7 +24,7 @@ class Delete {
     /* Delete Data */
     $sql = "DELETE FROM $table WHERE id= $id";
 
-    if ($con->query($sql) === TRUE) {
+    if ($con->query($sql) === true) {
       echo json_encode(['status' => 'Success', 'message' => 'Data is Deleted.']);
     }
     else {
