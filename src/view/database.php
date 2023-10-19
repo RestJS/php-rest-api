@@ -13,7 +13,7 @@ class Database {
         public static function connection() {
 
                 /* Create connection */
-                $con = new mysqli(SERVER_NAME, USER_NAME, PASSWORD, DATABASE_NAME);
+                $con = new mysqli($_ENV['HOST_NAME'], $_ENV['USER_NAME'], $_ENV['PASSWORD'], $_ENV['DATABASE_NAME']);
 
                 /* Check connection */
                 if ($con->connect_error) {

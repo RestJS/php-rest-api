@@ -19,7 +19,7 @@ class Auth {
         /* Check Access Token */
         if (isset($_GET['access_token'])) {
 
-            if ($_GET['access_token'] != ACCESS_TOKEN) {
+            if ($_GET['access_token'] != $_ENV['ACCESS_TOKEN']) {
                 echo json_encode(['status' => 'Fail', 'error' => 'Please provide valid access token']);
                 die();
             }
@@ -28,7 +28,7 @@ class Auth {
         /* Check Authorization */
         elseif (isset($headers['Authorization'])) {
 
-            if ($headers['Authorization'] != "Bearer " . ACCESS_TOKEN) {
+            if ($headers['Authorization'] != "Bearer " . $_ENV['ACCESS_TOKEN']) {
                 echo json_encode(['status' => 'Fail', 'error' => 'Please provide valid access token']);
                 die();
             }

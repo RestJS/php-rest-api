@@ -4,6 +4,7 @@
 namespace RestJS\PhpRestApi;
 
 /* Use External Class */
+use Dotenv\Dotenv;
 use RestJS\PhpRestApi\Controller\File;
 use RestJS\PhpRestApi\Controller\Method;
 use RestJS\PhpRestApi\View\Auth;
@@ -14,7 +15,8 @@ class Rest {
     public static function execute($dir) {
 
         /* Include Varibles File */
-        include_once $dir . '/env.php';
+        $dotenv = Dotenv::createImmutable($dir);
+        $dotenv->load();
 
         /* Include View Function */
         Auth::accessToken();
