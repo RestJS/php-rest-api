@@ -9,9 +9,9 @@ class Table {
 
         /* Check Table Name */
         if (!isset($_GET['table'])) {
-            echo json_encode(array('status' => 'Fail', 'error' => 'Please provide valid input.'));
+            echo json_encode(['status' => 'Fail', 'error' => 'Please provide valid input.']);
             die();
-        } 
+        }
         else {
             return $_GET['table'];
         }

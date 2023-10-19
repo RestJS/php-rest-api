@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /* Define Namespace */
 namespace RestJS\PhpRestApi\Controller;
@@ -22,14 +22,14 @@ class File {
 
               /* Check Extension */
               if(!in_array(strtolower($file_extension),$allowed_extension)){
-                echo json_encode(array('status'=>'Fail', 'error'=>'Please upload png, jpg, jpeg and webp file.'));
-                die(); 
+                echo json_encode(['status'=>'Fail', 'error'=>'Please upload png, jpg, jpeg and webp file.']);
+                die();
               }
 
               /* Check File Size */
               if($_FILES["upload"]["size"] > 1024*1024){
-                echo json_encode(array('status'=>'Fail', 'error'=>'Please upload 1MB size file.'));
-                die(); 
+                echo json_encode(['status'=>'Fail', 'error'=>'Please upload 1MB size file.']);
+                die();
               }
               
               /* Upload File Path */
@@ -41,7 +41,7 @@ class File {
                 /* Upload File Link */
                 $url = $dir ."/".$url;
 
-                echo json_encode(array('status'=>'Success', 'message'=>'File is successful uploaded.', 'file_url' => $url));
+                echo json_encode(['status'=>'Success', 'message'=>'File is successful uploaded.', 'file_url' => $url]);
 
               }
             break;
@@ -57,12 +57,12 @@ class File {
 
               /* Delete File */
               if(unlink($url)){
-                echo json_encode(array('status'=>'Success', 'message'=>'File is deleted.'));
+                echo json_encode(['status'=>'Success', 'message'=>'File is deleted.']);
               }
             break;
 
-            default: 
-            echo json_encode(array('status'=>'Fail', 'error'=>'Please use POST and DELETE Method for file.'));
+            default:
+            echo json_encode(['status'=>'Fail', 'error'=>'Please use POST and DELETE Method for file.']);
         
         }
     }

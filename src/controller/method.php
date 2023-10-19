@@ -50,6 +50,10 @@ class Method {
                 /* Include DELETE Model Fuction */
                 Delete::deleteData($table, $id);
                 break;
+
+            default:
+            echo json_encode(['status'=>'Fail', 'error'=>'Please use GET, PUT, POST and DELETE Method for data.']);
+            
         }
     }
 }

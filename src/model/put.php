@@ -14,7 +14,7 @@ class Put {
 
     /* Check Data and Check ID */
     if(!isset($data) && !isset($id)) {
-      echo json_encode(array('status'=>'Fail', 'error'=>'Please provide valid input.'));
+      echo json_encode(['status'=>'Fail', 'error'=>'Please provide valid input.']);
       die();
     }
 
@@ -40,10 +40,10 @@ class Put {
     $sql = "UPDATE $table SET $dataString  WHERE id = $id";
 
     if ($con->query($sql) === TRUE) {
-      echo json_encode(array('status'=>'Success', 'message'=>'Data is Updated.'));
+      echo json_encode(['status'=>'Success', 'message'=>'Data is Updated.']);
     }
     else {
-      echo json_encode(array('status'=>'Fail', 'error'=>'Please provide valid input.'));
+      echo json_encode(['status'=>'Fail', 'error'=>'Please provide valid input.']);
       die();
     }
   }

@@ -14,7 +14,7 @@ class Post {
 
     /* Check Data */
     if (!isset($data)) {
-      echo json_encode(array('status' => 'Fail', 'error' => 'Please provide valid input.'));
+      echo json_encode(['status' => 'Fail', 'error' => 'Please provide valid input.']);
       die();
     }
 
@@ -42,10 +42,10 @@ class Post {
     $sql = "INSERT INTO $table ($keys) VALUES ('$val')";
 
     if ($con->query($sql) === TRUE) {
-      echo json_encode(array('status' => 'Success', 'message' => 'Data is Inserted.'));
+      echo json_encode(['status' => 'Success', 'message' => 'Data is Inserted.']);
     }
     else {
-      echo json_encode(array('status' => 'Fail', 'error' => 'Please provide valid input.'));
+      echo json_encode(['status' => 'Fail', 'error' => 'Please provide valid input.']);
       die();
     }
     

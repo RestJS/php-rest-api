@@ -36,10 +36,10 @@ class Get {
     }
 
     if (mysqli_num_rows($result) > 0) {
-      echo json_encode(array('status'=>'Success', 'data'=>$arr));
-    } 
+      echo json_encode(['status'=>'Success', 'data'=>$arr]);
+    }
     else {
-      echo json_encode(array('status'=>'Fail', 'error'=>'Please provide valid input.'));
+      echo json_encode(['status'=>'Fail', 'error'=>'Please provide valid input.']);
       die();
     }
   }

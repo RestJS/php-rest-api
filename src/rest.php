@@ -14,14 +14,14 @@ class Rest {
     public static function execute($dir) {
 
         /* Include Varibles File */
-        include $dir . '/env.php';
+        include_once $dir . '/env.php';
 
         /* Include View Function */
         Auth::accessToken();
         $table = Table::checkTable();
 
         /* Check ID */
-        if (!isset($_GET['id'])) { $id = null; } 
+        if (!isset($_GET['id'])) { $id = null; }
         else {  $id = $_GET['id']; }
 
         /* Check Upload File */
